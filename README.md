@@ -16,7 +16,7 @@ Our customer is a very popular blogger, who generates between 2 and 3 posts an h
 
 You can see the results of this task here: https://test-task-pixelsoft.antalogic.dev
 
-# User creations
+# Demo credential
 * Admin:
     * Email: zigi@gmail.com
     * Password: 12345678
