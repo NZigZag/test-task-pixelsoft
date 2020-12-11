@@ -1,0 +1,77 @@
+.wrapper-main-admin-page {
+    &>.container {
+        &>.row {
+            &>.col-title-page {
+                margin-top: 50px;
+            }
+            &>.col-btn-import {
+                margin: 30px 0;
+                &>.btn-import-posts {
+                    border: none;
+                    background-color: $BG_HEADER;
+                    color: $TEXT_COLOR;
+                    padding: 5px 50px;
+                    height: 25px;
+                    width: 140px;
+                    &:hover {
+                        background: $BG_HOVER;
+                        cursor: pointer;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                    &.loading {
+                        //background-image: url("../../images/loader.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                    }
+                }
+            }
+            &>.col-import-table {
+                &>#import-posts-table {
+                    background: $BG_HEADER;
+                    color: $TEXT_COLOR;
+                    width: 100%;
+                    line-height: 1.3;
+                    &>thead {
+                        background: $BG_HOVER;
+                        font-size: 15px;
+                        &>tr {
+                            &>th {
+                                padding: 5px 0;
+                                &.th-title {
+                                    width: 30%;
+                                }
+                                &.th-description {
+                                    width: 50%;
+                                }
+                                &.th-date-publication {
+                                    width: 20%;
+                                }
+                            }
+                        }
+                    }
+                    &>tbody {
+                        font-size: 14px;
+                        &>tr {
+                            &:nth-child(even) {
+                                background: darken($BG_COLOR, 35);
+                            }
+                            &>td {
+                                border-right: 1px solid darken($BG_COLOR, 45);
+                                padding: 5px 10px;
+                                &:last-child {
+                                    border-right: none;
+                                }
+                                &.td-date-publication {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

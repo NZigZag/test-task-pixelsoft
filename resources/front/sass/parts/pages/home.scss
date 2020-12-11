@@ -1,0 +1,21 @@
+section.wrapper-posts-page {
+    margin-top: 20px;
+    flex-grow: 1;
+    &>.container {
+        &>.row {
+            &>.wrap-sort-order-post {
+                &>form {
+                    padding-bottom: 10px;
+                }
+            }
+            &>.wrap-item-post {
+                margin-bottom: 15px;
+                @import "../item-post";
+            }
+            &>.wrap-pagination-post {
+                margin-bottom: 15px;
+                @import "../pagination";
+            }
+        }
+    }
+}

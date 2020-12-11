@@ -1,0 +1,62 @@
+section.wrapper-login-page,
+section.wrapper-register-page {
+    margin: 20px 0;
+    flex-grow: 1;
+    &>.container {
+        &>.row {
+            &>.login-form,
+            &>.register-form {
+                text-align: center;
+                &>form {
+                    display: inline-block;
+                    padding: 30px;
+                    background: $BG_HEADER;
+                    color: $TEXT_COLOR;
+                    font-size: 14px;
+                    &>.form-group {
+                        padding-bottom: 10px;
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                        &>label {
+                            display: block;
+                            padding-bottom: 5px;
+                            text-align: left;
+                            &[for='remember'] {
+                                display: inline;
+                                float: left;
+                                padding-top: 5px;
+                            }
+                        }
+                        &>input {
+                            height: 25px;
+                            width: 250px;
+                            &.is-invalid {
+                                border: 1px solid $BG_COLOR_ERROR;
+                            }
+                            &:focus {
+                                outline: $BG_HOVER;
+                            }
+                            &#remember {
+                                width: 15px;
+                                height: 15px;
+                                float: left;
+                            }
+                        }
+                        &>.btn-login,
+                        &>.btn-register {
+                            color: $TEXT_COLOR;
+                            background: $BG_HOVER;
+                            border: none;
+                            width: 100%;
+                            padding: 5px 0px;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

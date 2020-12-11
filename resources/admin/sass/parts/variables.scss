@@ -1,0 +1,9 @@
+$BG_COLOR: rgba(228, 234, 239, 1);
+$BG_COLOR_ERROR: rgba(255, 0, 0, .9);
+$BG_COLOR_SUCCESS: rgba(0, 128, 0, .9);
+
+$BG_HEADER: darken($BG_COLOR, 40);
+$BG_HOVER: darken($BG_COLOR, 60);
+
+$TEXT_COLOR_MSG: rgba(255, 255, 255, 1);
+$TEXT_COLOR: rgba(255, 255, 255, 1);

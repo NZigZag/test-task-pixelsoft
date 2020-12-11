@@ -1,0 +1,139 @@
+@import 'parts/variables';
+@import 'parts/fonts';
+@import 'parts/mixins';
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'mukta-regular';
+}
+
+body {
+    background: $BG_COLOR;
+    .clearfix {
+        &::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+
+    .title-page {
+        padding: 15px 0;
+        font-size: 32px;
+    }
+
+    &>.wrapper-page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        &>.header-page {
+            background: $BG_HEADER;
+            &>.container {
+                &>.row {
+                    .navigation-page {
+                        display: inline-block;
+                        float: right;
+                        &>li {
+                            display: inline-block;
+                            float: left;
+                            &.active {
+                                background: $BG_HOVER;
+                            }
+                            &>a {
+                                display: block;
+                                height: 50px;
+                                line-height: 50px;
+                                padding: 0 10px;
+                                text-decoration: none;
+                                color: $TEXT_COLOR;
+                                &:hover {
+                                    background: $BG_HOVER;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &>.wrapper-msg-page {
+            &>.container {
+                &>.row {
+                    &>div {
+                        &>.msg {
+                            padding: 15px 20px;
+                            @include borderRadius(7.5px);
+                            opacity: .75;
+                            margin-top: 15px;
+                            color: $TEXT_COLOR_MSG;
+                            position: relative;
+                            &.error {
+                                background: $BG_COLOR_ERROR;
+                            }
+                            &.success {
+                                background: $BG_COLOR_SUCCESS;
+                            }
+                            &>p {
+                                font-size: 12px;
+                            }
+                            &>button.msg-close {
+                                position: absolute;
+                                padding: 0;
+                                background: none;
+                                border: none;
+                                color: #fff;
+                                right: 10px;
+                                top: 5px;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @import "parts/pages/home";
+        @import "parts/pages/cabinet";
+        @import "parts/pages/login";
+
+        &>.footer-page {
+            background: $BG_FOOTER;
+            padding: 20px 0;
+            flex-shrink: 0;
+            &>.container {
+                &>.row {
+                    &>.footer-links, &>.footer-info {
+                        &>ul {
+                            color: $TEXT_COLOR;
+                            &>li {
+                                font-size: 14px;
+                                line-height: 1.5;
+                                &:first-child {
+                                    text-decoration: underline;
+                                    padding-bottom: 10px;
+                                    font-size: 20px;
+                                }
+                                &>a {
+                                    color: $TEXT_COLOR_LINK;
+                                    text-decoration: none;
+                                    &.active {
+                                        text-decoration: underline;
+                                    }
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,413 @@
+@font-face {
+  font-family: "mukta-regular";
+  src: url("/../fonts/Mukta/Mukta-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "mukta-regular";
+}
+
+body {
+  background: #f2ecec;
+}
+body .clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+body .title-page {
+  padding: 15px 0;
+  font-size: 32px;
+}
+body > .wrapper-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body > .wrapper-page > .header-page {
+  background: #9f7373;
+}
+body > .wrapper-page > .header-page > .container > .row .navigation-page {
+  display: inline-block;
+  float: right;
+}
+body > .wrapper-page > .header-page > .container > .row .navigation-page > li {
+  display: inline-block;
+  float: left;
+}
+body > .wrapper-page > .header-page > .container > .row .navigation-page > li.active {
+  background: #664646;
+}
+body > .wrapper-page > .header-page > .container > .row .navigation-page > li > a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+body > .wrapper-page > .header-page > .container > .row .navigation-page > li > a:hover {
+  background: #664646;
+}
+body > .wrapper-page > .wrapper-msg-page > .container > .row > div > .msg {
+  padding: 15px 20px;
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -webkit-border-radius: 7.5px;
+  /* Firefox 1-3.6 */
+  -moz-border-radius: 7.5px;
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 7.5px;
+  opacity: 0.75;
+  margin-top: 15px;
+  color: white;
+  position: relative;
+}
+body > .wrapper-page > .wrapper-msg-page > .container > .row > div > .msg.error {
+  background: rgba(255, 0, 0, 0.9);
+}
+body > .wrapper-page > .wrapper-msg-page > .container > .row > div > .msg.success {
+  background: rgba(0, 128, 0, 0.9);
+}
+body > .wrapper-page > .wrapper-msg-page > .container > .row > div > .msg > p {
+  font-size: 12px;
+}
+body > .wrapper-page > .wrapper-msg-page > .container > .row > div > .msg > button.msg-close {
+  position: absolute;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  right: 10px;
+  top: 5px;
+}
+body > .wrapper-page > .wrapper-msg-page > .container > .row > div > .msg > button.msg-close:hover {
+  cursor: pointer;
+}
+body > .wrapper-page > .wrapper-msg-page > .container > .row > div > .msg > button.msg-close:focus {
+  outline: none;
+}
+body > .wrapper-page section.wrapper-posts-page {
+  margin-top: 20px;
+  flex-grow: 1;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-sort-order-post > form {
+  padding-bottom: 10px;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post {
+  margin-bottom: 15px;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post {
+  background: #9f7373;
+  color: white;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .image-post > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .info-post {
+  font-size: 12px;
+  padding: 5px 5px 0 5px;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .info-post > .author-post, body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .info-post > .date-publication-post {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .info-post > .author-post {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .info-post > .date-publication-post {
+  text-align: right;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .title-post > a {
+  display: block;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .title-post > a:hover {
+  text-decoration: underline;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .description-post {
+  height: 95px;
+  overflow: hidden;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-item-post .item-post > .description-post > p {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-pagination-post {
+  margin-bottom: 15px;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-pagination-post nav > ul.pagination {
+  display: inline-block;
+  float: left;
+  color: white;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-pagination-post nav > ul.pagination > li {
+  display: inline-block;
+  float: left;
+  font-size: 18px;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-pagination-post nav > ul.pagination > li.active > span {
+  background: #664646;
+}
+body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-pagination-post nav > ul.pagination > li > a, body > .wrapper-page section.wrapper-posts-page > .container > .row > .wrap-pagination-post nav > ul.pagination > li > span {
+  display: block;
+  padding: 10px 5px;
+  background: #9f7373;
+  color: white;
+}
+body > .wrapper-page section.wrapper-cabinet-page {
+  margin-top: 20px;
+  flex-grow: 1;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form {
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #9f7373;
+  color: white;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > h2 {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group {
+  padding-bottom: 10px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group:last-child {
+  padding-bottom: 0;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > label, body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > input, body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > textarea {
+  display: inline-block;
+  float: left;
+  font-size: 14px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > label:focus, body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > input:focus, body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > textarea:focus {
+  outline: #664646;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > label {
+  width: 120px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > input, body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > textarea {
+  width: 350px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > input.is-invalid, body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > textarea.is-invalid {
+  border: 1px solid rgba(255, 0, 0, 0.9);
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > textarea {
+  resize: vertical;
+  height: 150px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > .btn-add-post {
+  width: 100%;
+  color: white;
+  background: #664646;
+  border: none;
+  padding: 5px 0px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-add-post > form > .form-group > .btn-add-post:hover {
+  cursor: pointer;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post {
+  margin-bottom: 15px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post {
+  background: #9f7373;
+  color: white;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .image-post > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .info-post {
+  font-size: 12px;
+  padding: 5px 5px 0 5px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .info-post > .author-post, body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .info-post > .date-publication-post {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .info-post > .author-post {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .info-post > .date-publication-post {
+  text-align: right;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .title-post > a {
+  display: block;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .title-post > a:hover {
+  text-decoration: underline;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .description-post {
+  height: 95px;
+  overflow: hidden;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-item-post .item-post > .description-post > p {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-pagination-post {
+  margin-bottom: 15px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-pagination-post nav > ul.pagination {
+  display: inline-block;
+  float: left;
+  color: white;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-pagination-post nav > ul.pagination > li {
+  display: inline-block;
+  float: left;
+  font-size: 18px;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-pagination-post nav > ul.pagination > li.active > span {
+  background: #664646;
+}
+body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-pagination-post nav > ul.pagination > li > a, body > .wrapper-page section.wrapper-cabinet-page > .container > .row > .wrap-pagination-post nav > ul.pagination > li > span {
+  display: block;
+  padding: 10px 5px;
+  background: #9f7373;
+  color: white;
+}
+body > .wrapper-page section.wrapper-login-page,
+body > .wrapper-page section.wrapper-register-page {
+  margin: 20px 0;
+  flex-grow: 1;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form {
+  text-align: center;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form {
+  display: inline-block;
+  padding: 30px;
+  background: #9f7373;
+  color: white;
+  font-size: 14px;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group {
+  padding-bottom: 10px;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group:last-child, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group:last-child,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group:last-child,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group:last-child {
+  padding-bottom: 0;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > label, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > label,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > label,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > label {
+  display: block;
+  padding-bottom: 5px;
+  text-align: left;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > label[for=remember], body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > label[for=remember],
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > label[for=remember],
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > label[for=remember] {
+  display: inline;
+  float: left;
+  padding-top: 5px;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > input, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > input,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > input,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > input {
+  height: 25px;
+  width: 250px;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > input.is-invalid, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > input.is-invalid,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > input.is-invalid,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > input.is-invalid {
+  border: 1px solid rgba(255, 0, 0, 0.9);
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > input:focus, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > input:focus,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > input:focus,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > input:focus {
+  outline: #664646;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > input#remember, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > input#remember,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > input#remember,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > input#remember {
+  width: 15px;
+  height: 15px;
+  float: left;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > .btn-login, body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > .btn-register, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > .btn-login, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > .btn-register,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > .btn-login,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > .btn-register,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > .btn-login,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > .btn-register {
+  color: white;
+  background: #664646;
+  border: none;
+  width: 100%;
+  padding: 5px 0px;
+}
+body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > .btn-login:hover, body > .wrapper-page section.wrapper-login-page > .container > .row > .login-form > form > .form-group > .btn-register:hover, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > .btn-login:hover, body > .wrapper-page section.wrapper-login-page > .container > .row > .register-form > form > .form-group > .btn-register:hover,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > .btn-login:hover,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .login-form > form > .form-group > .btn-register:hover,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > .btn-login:hover,
+body > .wrapper-page section.wrapper-register-page > .container > .row > .register-form > form > .form-group > .btn-register:hover {
+  cursor: pointer;
+}
+body > .wrapper-page > .footer-page {
+  background: #9f7373;
+  padding: 20px 0;
+  flex-shrink: 0;
+}
+body > .wrapper-page > .footer-page > .container > .row > .footer-links > ul, body > .wrapper-page > .footer-page > .container > .row > .footer-info > ul {
+  color: white;
+}
+body > .wrapper-page > .footer-page > .container > .row > .footer-links > ul > li, body > .wrapper-page > .footer-page > .container > .row > .footer-info > ul > li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+body > .wrapper-page > .footer-page > .container > .row > .footer-links > ul > li:first-child, body > .wrapper-page > .footer-page > .container > .row > .footer-info > ul > li:first-child {
+  text-decoration: underline;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+body > .wrapper-page > .footer-page > .container > .row > .footer-links > ul > li > a, body > .wrapper-page > .footer-page > .container > .row > .footer-info > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+body > .wrapper-page > .footer-page > .container > .row > .footer-links > ul > li > a.active, body > .wrapper-page > .footer-page > .container > .row > .footer-info > ul > li > a.active {
+  text-decoration: underline;
+}
+body > .wrapper-page > .footer-page > .container > .row > .footer-links > ul > li > a:hover, body > .wrapper-page > .footer-page > .container > .row > .footer-info > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=main.css.map */

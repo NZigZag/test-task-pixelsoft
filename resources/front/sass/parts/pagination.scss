@@ -1,0 +1,23 @@
+nav {
+    &>ul.pagination {
+        display: inline-block;
+        float: left;
+        color: $TEXT_PAGINATION_COLOR;
+        &>li {
+            display: inline-block;
+            float: left;
+            font-size: 18px;
+            &.active {
+                &>span {
+                    background: $BG_PAGINATION_HOVER;
+                }
+            }
+            &>a, &>span {
+                display: block;
+                padding: 10px 5px;
+                background: $BG_PAGINATION;
+                color: $TEXT_PAGINATION_COLOR;
+            }
+        }
+    }
+}

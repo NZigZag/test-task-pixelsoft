@@ -1,0 +1,67 @@
+section.wrapper-cabinet-page {
+    margin-top: 20px;
+    flex-grow: 1;
+    &>.container {
+        &>.row {
+            &>.wrap-add-post {
+                &>form {
+                    display: inline-block;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    background: $BG_HEADER;
+                    color: $TEXT_COLOR;
+                    &>h2 {
+                        text-align: center;
+                        font-size: 20px;
+                        padding-bottom: 10px;
+                    }
+                    &>.form-group {
+                        padding-bottom: 10px;
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                        &>label, &>input, &>textarea {
+                            display: inline-block;
+                            float: left;
+                            font-size: 14px;
+                            &:focus {
+                                outline: $BG_HOVER;
+                            }
+                        }
+                        &>label {
+                            width: 120px;
+                        }
+                        &>input, &>textarea {
+                            width: 350px;
+                            &.is-invalid {
+                                border: 1px solid $BG_COLOR_ERROR;
+                            }
+                        }
+                        &>textarea {
+                            resize: vertical;
+                            height: 150px;
+                        }
+                        &>.btn-add-post {
+                            width: 100%;
+                            color: $TEXT_COLOR;
+                            background: $BG_HOVER;
+                            border: none;
+                            padding: 5px 0px;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            &>.wrap-item-post {
+                margin-bottom: 15px;
+                @import "../item-post";
+            }
+            &>.wrap-pagination-post {
+                margin-bottom: 15px;
+                @import "../pagination";
+            }
+        }
+    }
+}
