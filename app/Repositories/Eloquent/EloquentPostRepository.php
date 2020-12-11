@@ -58,7 +58,8 @@ class EloquentPostRepository implements PostRepositoryInterface
         $typeSort = ($sortOrder === 'asc') ? false : true;
 
         return (new Collection($this->post))->sortBy($this->sortBy, SORT_REGULAR, $typeSort)
-                                            ->paginate($perPage ?? $this->perPage);
+                                            ->paginate($perPage ?? $this->perPage)
+                                            ->appends(['sort' => $sortOrder]);
     }
 
     /**
